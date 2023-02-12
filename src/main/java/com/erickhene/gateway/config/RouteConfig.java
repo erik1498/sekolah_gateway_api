@@ -32,7 +32,7 @@ public class RouteConfig {
                         .path(route.getPath())
                         .filters(f -> {
                             log.info("Set {}", route.getPath());
-                            CustomFilter customFilter = new CustomFilter();
+                            CustomFilter customFilter = new CustomFilter(keycloakAuth);
                             return f.filter(customFilter);
                         })
                         .uri(route.getUri()));
