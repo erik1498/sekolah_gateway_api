@@ -13,7 +13,6 @@ public class CustomFilter implements GatewayFilter {
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-        // your custom filter logic
         log.info("Request Url = {}", exchange.getRequest().getPath());
         return chain.filter(exchange);
     }
