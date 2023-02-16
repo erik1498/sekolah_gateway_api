@@ -11,3 +11,7 @@ p
 @src/test/java/com/erickhene/gateway/GatewayApplicationTests.java,d/c/dc6385ec1dd1439fcd272237cb3b49df9098d662
 k
 ;src/main/java/com/erickhene/gateway/GatewayApplication.java,9/c/9cceb370225c3b34679dfd7b5ca6104fd8af379c
+e
+5src/main/java/com/erickhene/gateway/service/Base.java,3/d/3d219ca5c7c3e0128869e2f3c51711a30fc9bb3c
+7
+pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec

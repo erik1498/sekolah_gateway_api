@@ -1,9 +1,11 @@
 package com.erickhene.gateway.keycloak;
 
+import lombok.extern.slf4j.Slf4j;
 import okhttp3.*;
 
 import java.io.IOException;
 
+@Slf4j
 public class KeycloakAuth {
     public Boolean authToken(String token){
         try {
@@ -19,7 +21,8 @@ public class KeycloakAuth {
             Response response = client.newCall(request).execute();
             return true;
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            log.error("Error [{}]", e.getMessage());
+            return false;
         }
     }
 }

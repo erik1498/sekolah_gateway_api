@@ -17,4 +17,6 @@ public class Route extends Base {
     private String path;
     @Column(name = "r_uri", nullable = false)
     private String uri;
+    @Column(name = "r_rewrite_path", nullable = false)
+    private String rewritePath;
 }
