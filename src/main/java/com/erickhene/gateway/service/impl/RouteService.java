@@ -11,7 +11,7 @@ import java.util.Optional;
 
 @Service
 @Slf4j
-public class RouteService implements Base {
+public class RouteService implements Base<Route> {
     private final RouteRepository repository;
 
     public RouteService(RouteRepository repository) {
@@ -19,9 +19,8 @@ public class RouteService implements Base {
     }
 
     @Override
-    public Optional<List<Route>> getAllRoute() {
-        log.info("Begin [{}]", "getAllRoute");
-        List<Route> all = repository.findAll();
-        return Optional.of(all);
+    public Optional<List<Route>> getAllData() {
+        log.info("Begin [{}]", "getAllDataRoute");
+        return repository.findAllByEnabledTrue();
     }
 }
